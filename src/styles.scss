@@ -1,3 +1,50 @@
 body {
   font-family: sans-serif;
 }
+.menu {
+  margin: 50%;
+  position: relative;
+  display: block; 
+  cursor: pointer;
+  width: 30px;
+  height: 20px;
+}
+.app { 
+    position: relative;
+    width: 100%;
+    background: black;
+    height: 2px;
+    cursor: pointer;
+    &:before {
+       content: '' ;
+       position: absolute;
+       width: 30px;
+       height: 2px;
+       background: black;
+       transform: translateY(-7px);
+       transition: all ease .4s;
+       transform-origin: left;
+  } 
+   &:after {
+       content: '' ;
+       position: absolute;
+       width: 30px;
+       height: 2px;
+       transform: translateY(7px);
+       background: black;
+       transition: all ease .4s;
+       transform-origin: left;
+       
+   }
+}
+.active {
+  height: 0px;
+  &:before {
+     width: 20px; 
+     transform: rotate(45deg);
+    }
+    &:after {
+      width: 20px; 
+      transform: rotate(-45deg);
+    }  
+}

@@ -38,13 +38,13 @@ body {
    }
 }
 .active {
-  height: 0px;
+  height: 2px;
   &:before {
-     width: 20px; 
+     width: 15px; 
      transform: rotate(45deg);
     }
     &:after {
-      width: 20px; 
+      width: 15px; 
       transform: rotate(-45deg);
     }  
 }
